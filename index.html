@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>HIER!!!</title>
-    <style>
-      @import "node_modules/ol/ol.css";
-    </style>
-    <style>
-      html, body, #map-container {
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        font-family: sans-serif;
-      }
-			.outerdiv{
-				box-sizing:border-box;
-				padding:10px;
-			}
-			.w100{
-				width:100%;
-				min-height:600px;
-			}
-    </style>
-  </head>
-  <body>
-		<div id="dToolbar" class="outerdiv">
-			<button onclick="onclick_OSM()">street map</button>
-			<button onclick="onclick_geo()">geojson</button>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<title>HIER!!!</title>
+		<style>
+			@import 'node_modules/ol/ol.css';
+		</style>
+		<link rel="stylesheet" href="./mystyles.css" />
+	</head>
+	<body>
+		<div id="map-container"></div>
+		<div id="dTools">
+			<a onclick="onclick_OSM()">street map</a>
+			<a onclick="onclick_geo()">geojson</a>
+			<a id="dClear" onclick="onclick_clear()">Clear</a>
+			<a id="dDownload" download="features.json">Download</a>
 		</div>
-		<div id="dTable" class="outerdiv w100">
-			<div id="dMap" style="width:100%;height:100%">
+		<!-- <div id="dTable" class="outerdiv w100">
+			<div id="dMap" style="width: 100%; height: 100%">
 				<div id="map-container"></div>
 			</div>
-		</div>
+		</div> -->
 		<script src="./basemin.js"></script>
-		<script src="./Mapping.js"  type="module"></script>
-    <script src="./start.js"></script>
-  </body>
+		<script src="./Mapping.js" type="module"></script>
+		<script src="./start.js"></script>
+	</body>
 </html>
